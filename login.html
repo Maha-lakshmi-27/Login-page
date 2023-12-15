@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width" , initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        .container {
+            border: 2px double aliceblue;
+            border-radius: 30px;
+            color: aliceblue;
+            padding: 40px;
+            padding-bottom: 55px;
+            width: 250px;
+            max-width: 300px;
+            margin: 60px auto;
+        }
+
+        label {
+            font-size: large;
+        }
+
+        div {
+            backdrop-filter: blur(5px);
+        }
+
+        #login {
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        html {
+            background-image: url(/Nature.jpg);
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: 'Gill Sans MT', serif, monospace;
+        }
+
+        input[type=text] {
+            border: 0px;
+            border-radius: 10px;
+            padding-right: 50px;
+            background: transparent;
+            cursor: pointer;
+            font-size: medium;
+            /* background-color: rgb(231, 239, 246); */
+            color: rgb(246, 252, 254);
+            height: 23px;
+        }
+
+        input[type=password] {
+            border: 0px;
+            border-radius: 10px;
+            padding-right: 50px;
+            background: transparent;
+            cursor: pointer;
+            font-size: medium;
+            /* background-color: rgb(231, 239, 246); */
+            color: rgb(246, 252, 254);
+            height: 23px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        input[type=submit] {
+            border-radius: 20px;
+            border: none;
+            height: 35px;
+            padding: 8px 105px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #Remember {
+            font-size: 13px;
+            vertical-align: middle;
+        }
+
+        .divider {
+            border-bottom: 1.2px solid;
+        }
+
+        #new {
+            text-align: center;
+        }
+
+        ::-webkit-input-placeholder {
+            color: rgba(150, 150, 150, 0.8);
+            font-size: smaller;
+        }
+
+        a:link {
+            color: rgb(246, 252, 254);
+        }
+
+        a:visited {
+            color: rgb(139, 203, 233);
+        }
+
+        a:hover {
+            color: rgb(166, 230, 251);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form>
+            <P id="login" style="text-align: center;">LOGIN</P>
+            <label>Email</label>
+            <input type="text" placeholder="Enter your email" required></input>
+            <div class="divider"></div><br>
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" required></input>
+            <div class="divider"></div><br>
+            <input type="checkbox" id="Remember"><label id="Remember">Remember Me</label></input><br></br>
+            <input type="submit" value="Login"></input><br></br>
+            <p id="new"><b>or</b><br></br>
+            <a href="/createnewac.html" id="new"><u>Create a new account</u></a>
+            </p>
+        </form>
+    </div>
+
+</body>
+
+</html>
