@@ -43,7 +43,7 @@
         input[type=text] {
             border: 0px;
             border-radius: 10px;
-            padding-right: 50px;
+            padding-right: 22px;
             background: transparent;
             cursor: pointer;
             font-size: medium;
@@ -51,17 +51,24 @@
             color: rgb(246, 252, 254);
             height: 23px;
         }
+        .fas {
+            position:relative;
+        }
 
         input[type=password] {
             border: 0px;
             border-radius: 10px;
-            padding-right: 50px;
+            padding-right: 22px;
             background: transparent;
             cursor: pointer;
             font-size: medium;
             /* background-color: rgb(231, 239, 246); */
             color: rgb(246, 252, 254);
-            height: 23px;
+            height: 24px;
+        }
+        .fa-eye-slash, .fa-eye {
+            position:relative;
+            cursor: pointer;
         }
 
         input:focus {
@@ -76,6 +83,15 @@
             text-align: center;
             font-weight: 600;
             font-size: 16px;
+            cursor: pointer;
+            color: rgb(7, 64, 64);
+        }
+
+        input[type=submit]:hover{
+            color: black;
+        }
+
+        input[type=checkbox]{
             cursor: pointer;
         }
 
@@ -95,11 +111,11 @@
         ::-webkit-input-placeholder {
             color: rgba(150, 150, 150, 0.8);
             font-size: smaller;
-            text-shadow: 1px 1px 1px #363636 !important;
+            text-shadow: 0.5px 0.5px 0.5px #363636 !important;
         }
 
         a:link {
-            color: rgb(246, 252, 254);
+            color: rgb(166, 230, 251);
         }
 
         a:visited {
@@ -107,7 +123,7 @@
         }
 
         a:hover {
-            color: rgb(166, 230, 251);
+            color: rgb(246, 252, 254);
         }
     </style>
 </head>
@@ -118,18 +134,22 @@
         <form>
             <P id="login" style="text-align: center;">LOGIN</P>
             <label>Email</label>
-            <input type="text" placeholder="Enter your email" required></input>
+            <input type="text" placeholder="Enter your email" required />
+            <i class="fas fa-envelope" id="emailicon"></i>
             <div class="divider"></div><br>
             <label>Password</label>
-            <input type="password" placeholder="Enter your password" required></input>
+            <input type="password" placeholder="Enter your password" required id="pwd" />
+            <i class="fa-solid fa-eye-slash" id="show-pwd" onclick="toggle()"></i>
             <div class="divider"></div><br>
             <input type="checkbox" id="Remember"><label id="Remember">Remember Me</label></input><br></br>
-            <input type="submit" value="Login"></input><br></br>
+            <input type="submit" value="Login" id="button" /><br></br>
             <p id="new"><b>or</b><br></br>
-            <a href="/createnewac.html" id="new"><u>Create a new account</u></a>
+                <a href="/createnewac.html" id="new"><u>Create a new account</u></a>
             </p>
         </form>
     </div>
+
+    <script src="./Login.js"></script>
 
 </body>
 
