@@ -3,26 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width" , initial-scale="1.0">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <link rel="stylesheet" href="./Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Login Page</title>
     <style>
         .container {
             border: 2px double aliceblue;
             border-radius: 30px;
             color: aliceblue;
-            padding: 40px;
-            padding-bottom: 55px;
+            padding: 40px 35px;
             width: 250px;
             max-width: 300px;
             margin: 60px auto;
+            backdrop-filter: blur(5px);
         }
 
         label {
             font-size: large;
-        }
-
-        div {
-            backdrop-filter: blur(5px);
         }
 
         #login {
@@ -31,16 +29,18 @@
         }
 
         html {
-            background-image: url(/Nature.jpg);
+            background-image: url(./Nature.jpg);
             height: 100%;
             width: 100%;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             font-family: 'Gill Sans MT', serif, monospace;
+            /* text-shadow: 1px 1px 1px #363636; */
         }
 
-        input[type=text] {
+        input[type=text], 
+        input[type=password] {
             border: 0px;
             border-radius: 10px;
             padding-right: 22px;
@@ -51,23 +51,14 @@
             color: rgb(246, 252, 254);
             height: 23px;
         }
+
         .fas {
-            position:relative;
+            position: relative;
         }
 
-        input[type=password] {
-            border: 0px;
-            border-radius: 10px;
-            padding-right: 22px;
-            background: transparent;
-            cursor: pointer;
-            font-size: medium;
-            /* background-color: rgb(231, 239, 246); */
-            color: rgb(246, 252, 254);
-            height: 24px;
-        }
-        .fa-eye-slash, .fa-eye {
-            position:relative;
+        .fa-eye-slash,
+        .fa-eye {
+            position: relative;
             cursor: pointer;
         }
 
@@ -87,11 +78,12 @@
             color: rgb(7, 64, 64);
         }
 
-        input[type=submit]:hover{
-            color: black;
+        input[type=submit]:hover {
+            color: rgb(3, 187, 233);
+            text-shadow: 0px 0px 10px rgb(68, 195, 254);
         }
 
-        input[type=checkbox]{
+        input[type=checkbox] {
             cursor: pointer;
         }
 
@@ -111,7 +103,7 @@
         ::-webkit-input-placeholder {
             color: rgba(150, 150, 150, 0.8);
             font-size: smaller;
-            text-shadow: 0.5px 0.5px 0.5px #363636 !important;
+            text-shadow: 0.5px .5px .5px #798295 !important;
         }
 
         a:link {
@@ -119,11 +111,62 @@
         }
 
         a:visited {
-            color: rgb(139, 203, 233);
+            color: rgb(139, 208, 233);
         }
 
         a:hover {
             color: rgb(246, 252, 254);
+        }
+
+        @media screen and (max-width:250px) {
+            .container {
+                padding: 12px 13px;
+                max-width: 165px;
+                margin: 20px auto;
+                top: 20px;
+                position: relative;
+            }
+
+            #login {
+                font-weight: 300;
+                font-size: 13px;
+            }
+
+            input[type=text],
+            input[type=password] {
+                padding-right: 10px;
+                width: 130px;
+                font-size: 12px;
+                height: 20px;
+            }
+
+            input[type=submit] {
+                height: 25px;
+                padding: 2px 65px;
+                font-weight: 600;
+                font-size: 13px;
+                position: absolute;
+                text-align: center;
+            }
+
+            #Remember {
+                font-size: 11px;
+            }
+
+            label {
+                font-size: 14px;
+            }
+
+            .fa-eye-slash,
+            .fa-eye,
+            .fas,
+            #new {
+                font-size: small;
+            }
+
+            .divider {
+                width: 165px;
+            }
         }
     </style>
 </head>
@@ -132,7 +175,7 @@
 
     <div class="container">
         <form>
-            <P id="login" style="text-align: center;">LOGIN</P>
+            <P id="login" style="text-align:center;">LOGIN</P>
             <label>Email</label>
             <input type="text" placeholder="Enter your email" required />
             <i class="fas fa-envelope" id="emailicon"></i>
